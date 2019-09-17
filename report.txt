@@ -4,6 +4,13 @@ Fund VAR - TRACKING
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+SUMMARY OF THE METHOD
+
+For track the eyes, we used a pair of glasses made by hand (see glasses.png), a webcam to capture the real world and a program (see the structure of the program bellow).
+
+The glasses are composed by four color blops (red, blue, yellow and green) that are catched by our webcam in the 2D webcam space (see tracking.png). This blops are going to give informations about the position and the orientation of the regard.
+We access those informations by using the program. Basically, the idea is to detect the blops and use the POSIT method to guess the position of the two eyes in the world space. We then can send them to Unity for the next TP.
+
 Program structure :
 
 - Initialization
