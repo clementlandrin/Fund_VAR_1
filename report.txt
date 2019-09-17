@@ -1,0 +1,37 @@
+PAUL-ERNEST Martin & LANDRIN Clément
+
+Fund VAR - TRACKING
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Program structure :
+
+- Initialization
+
+- Main Loop
+
+Initialization :
+
+- Creation of window
+
+- Callbacks (keys and mouse) set up
+
+Main Loop :
+
+- Blop detections
+
+- Find position and orientation of the glasses using POSIT method in the camera space
+
+- Transform the position and orientation matrix so we can track the eyes in the world space
+
+- Send the positions of the three eyes (left, cyclope and right) using a client OSC
+
+Blop detections :
+
+- Find contours using image masks, HSV space and tolerance
+
+- Create and smooth a bouding rectangle using the contour
+
+- Set the center of the rectangle as the center of the corresponding color blop
+
+- Return the center of the blop
