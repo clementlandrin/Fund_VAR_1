@@ -1,0 +1,18 @@
+The scene is composed of height targets and a black rectangle background composed of green hexagones.
+
+The camera as three attached script : Osc, UDP Packet IO and OSC receive camera adaptive.
+The main script is OSC receive camera adaptive, while the two others are used to communitcate and receive the camera position input.
+
+The public parameters of OSCReceiveCameraAdaptive are :
+	- RemoteIP (here default value to "127.0.0.1")
+	- SendToPort (here default value to 0)
+	- ListenerPort (here default value to 0)
+	- object_to_look (a Unity class defining where the camera is looking at)
+
+RemoteIP should be set to 127.0.0.1 as it is the IP address of localhost.
+ListenerPort should be set to 7000 as it is the port used by OSC to connect in the python script.
+object_to_look should be set to screen.
+
+The Z coordinate is reversed as we are behind the screen.
+
+SetAssymetricFrustrum should be called each frame to generate the frustrum perspective.
